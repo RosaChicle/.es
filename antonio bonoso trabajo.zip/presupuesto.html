@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rosa Chicle - Presupuesto</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script defer src="../js/script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Rosa Chicle</h1>
+    <button id="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="presupuesto.html" class="activo">Presupuesto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Solicita tu presupuesto</h2>
+
+    <section class="form-presupuesto">
+      <h3>Formulario de presupuesto</h3>
+      <form action="#" method="post" novalidate>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}$" title="Solo letras y espacios, mínimo 3 caracteres">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Formato de email válido">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required pattern="^\+?[0-9\s\-]{7,15}$" title="Solo números y símbolos + o - permitidos">
+
+        <label for="producto">Producto:</label>
+        <select id="producto" name="producto" required>
+          <option value="">Seleccione un producto</option>
+          <option value="producto1">Producto 1</option>
+          <option value="producto2">Producto 2</option>
+          <option value="producto3">Producto 3</option>
+        </select>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" required min="1" max="100" title="Ingrese una cantidad entre 1 y 100">
+
+        <label for="comentarios">Comentarios adicionales:</label>
+        <textarea id="comentarios" name="comentarios" rows="4" minlength="10" placeholder="Escribe aquí cualquier detalle adicional"></textarea>
+
+        <label>
+          <input type="checkbox" name="politica" required>
+          Acepto la <a href="#">política de privacidad</a>
+        </label>
+
+        <button type="submit">Solicitar presupuesto</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Rosa Chicle</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/15RydJzqDM/?mibextid=wwXIfr" aria-label="Facebook"><img src="../imagenes/facebook.svg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/rosa___chicle?igsh=MnFkdW85aGFweXZj" aria-label="Instagram"><img src="../imagenes/instagram.svg" alt="Instagram"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
